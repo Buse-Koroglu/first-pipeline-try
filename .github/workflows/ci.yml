@@ -2,12 +2,15 @@ name: First Pipeline Try
 
 on:
   push:
+    branches:
+        - main
+        - test
 
 jobs:
   first-ci:
     runs-on:
       - ubuntu-latest
-    if: github.ref == 'refs/head/test'  
+    if: github.ref == 'refs/heads/test'  
     steps:
       - name: Checkout
         uses: actions/checkout@v4
