@@ -1,0 +1,17 @@
+name: First Pipeline Try
+
+on:
+  push:
+
+jobs:
+  first-ci:
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Checkout
+        run: actions/checkout@v4
+      - name: Hello CI/CD
+        run: echo "Hello I'm learning CI/CD"
+      - name: Goodbye CI/CD
+        run: echo "Bye Bye"
+    
